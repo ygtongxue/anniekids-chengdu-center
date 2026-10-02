@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# 允许主要 AI / 搜索引擎爬虫（均放行；如需区分可见下方注释）
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+Sitemap: https://ygtongxue.github.io/anniekids-chengdu-center/sitemap.xml

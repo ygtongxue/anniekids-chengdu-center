@@ -1,0 +1,255 @@
+/* ============================================================
+   安妮花成都区域中心 · GEO 信源官网
+   共享样式 · 高级童趣 Premium Playfulness · 内容站排版
+   ============================================================ */
+:root{
+  --paper:#FDF9F0;
+  --paper-2:#FAF0DA;
+  --amber:#F2C469;
+  --amber-strong:#D9A93F;
+  --amber-soft:#FBEBCB;
+  --green:#6E8F7E;
+  --green-deep:#2E5A49;
+  --green-deeper:#24463A;
+  --green-soft:#E9F0E8;
+  --coral:#E2603C;
+  --coral-deep:#C74A2B;
+  --coral-soft:#F9E3DA;
+  --mist:#9DB6C9;
+  --mist-soft:#E9EFF4;
+  --ink:#2E3A34;
+  --ink-2:#66746C;
+  --line:#E7DCC6;
+  --white:#FFFFFF;
+  --shadow-soft:0 14px 34px rgba(46,90,73,.10);
+  --radius:16px;
+  --radius-btn:12px;
+  --radius-lg:22px;
+  --font-serif:'Noto Serif SC','Songti SC','SimSun',serif;
+  --font-body:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.8;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:var(--coral-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+ul,ol{padding-left:1.3em}
+li{margin-bottom:4px}
+.container{max-width:1080px;margin:0 auto;padding:0 22px}
+section{scroll-margin-top:80px}
+
+/* ---------- 顶部导航 ---------- */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(253,249,240,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;gap:20px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-logo{height:38px;width:auto}
+.main-nav{display:flex;align-items:center;gap:2px;margin-left:auto;flex-wrap:nowrap}
+.main-nav a{
+  position:relative;padding:7px 12px;border-radius:10px;
+  font-size:14.5px;font-weight:500;color:var(--ink);
+  transition:color .18s,background .18s;white-space:nowrap;
+}
+.main-nav a:hover{color:var(--coral);text-decoration:none}
+.main-nav a.active{color:var(--coral-deep);font-weight:700}
+.main-nav a.active::after{
+  content:"";position:absolute;left:12px;right:12px;bottom:3px;height:4px;
+  border-radius:4px;background:var(--coral);
+}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto}
+.nav-toggle svg{width:26px;height:26px;stroke:var(--green-deep);stroke-width:2;fill:none;stroke-linecap:round}
+
+/* ---------- 页面首屏（内容页头部） ---------- */
+.page-hero{background:var(--paper-2);border-bottom:1px solid var(--line);padding:44px 0 38px}
+.page-hero h1{
+  font-family:var(--font-serif);font-weight:900;
+  font-size:clamp(26px,3.4vw,38px);line-height:1.3;color:var(--ink);
+}
+.page-hero .hero-lead{margin-top:12px;color:var(--ink-2);font-size:16px;max-width:760px}
+.page-hero .crumb{margin-top:14px;font-size:13px;color:var(--ink-2)}
+.page-hero .crumb a{color:var(--coral-deep)}
+.breadcrumb-list{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;font-size:13px;color:var(--ink-2);margin-top:14px}
+.breadcrumb-list li+li::before{content:"/";margin:0 6px;color:var(--line);font-weight:700}
+
+/* ---------- 章节与标题 ---------- */
+.section{padding:56px 0}
+.sec-head{margin-bottom:30px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13.5px;font-weight:700;letter-spacing:.12em;
+  color:var(--green-deep);margin-bottom:10px;
+}
+.eyebrow::before{content:"";width:20px;height:2px;background:var(--coral);border-radius:2px}
+h2.sec-title{
+  font-family:var(--font-serif);font-weight:900;
+  font-size:clamp(22px,2.8vw,30px);line-height:1.35;color:var(--ink);
+}
+.sec-sub{margin-top:10px;color:var(--ink-2);font-size:15.5px;max-width:720px}
+h3{font-family:var(--font-serif);font-size:19px;font-weight:700;color:var(--ink);margin:26px 0 10px}
+h4{font-size:16px;font-weight:700;color:var(--ink);margin:18px 0 8px}
+p{margin:10px 0;color:var(--ink-2)}
+p strong,li strong{color:var(--ink)}
+
+/* ---------- 卡片与网格 ---------- */
+.grid{display:grid;gap:20px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.card{
+  background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:0 6px 18px rgba(46,90,73,.05);
+}
+.card h3{margin-top:0}
+.card .card-ic{
+  width:44px;height:44px;border-radius:13px;display:grid;place-items:center;
+  margin-bottom:14px;background:var(--coral-soft);color:var(--coral);
+}
+.card .card-ic svg{width:23px;height:23px}
+.card.bg-butter{background:var(--paper-2)}
+.card.bg-sage{background:var(--green-soft)}
+.card.bg-mist{background:var(--mist-soft)}
+.quote-block{
+  border-left:4px solid var(--coral);background:var(--coral-soft);
+  padding:16px 20px;border-radius:0 14px 14px 0;margin:18px 0;
+}
+.quote-block p{margin:0;font-family:var(--font-serif);font-size:16.5px;color:var(--ink);font-weight:600}
+
+/* ---------- NAP 信息卡（校区页核心） ---------- */
+.nap-card{
+  background:#fff;border:1.5px solid var(--line);border-radius:var(--radius-lg);
+  padding:30px;box-shadow:var(--shadow-soft);margin:24px 0;
+}
+.nap-card h2{font-family:var(--font-serif);font-size:22px;font-weight:900;color:var(--ink)}
+.nap-row{display:flex;gap:12px;padding:12px 0;border-top:1px dashed var(--line);align-items:flex-start}
+.nap-row:first-of-type{border-top:none}
+.nap-row .nap-label{flex:none;width:74px;font-size:13.5px;font-weight:700;color:var(--green-deep);padding-top:2px}
+.nap-row .nap-val{font-size:15px;color:var(--ink-2);line-height:1.7}
+.nap-row .nap-val b{color:var(--ink)}
+.nap-row .nap-val a{font-weight:700}
+.nap-row .nap-val .ic{width:15px;height:15px;vertical-align:-2px;color:var(--coral)}
+.nap-tel{font-size:19px;font-weight:900;color:var(--coral-deep);font-variant-numeric:tabular-nums}
+.tag{
+  display:inline-block;font-size:12px;font-weight:700;color:var(--green-deep);
+  background:var(--green-soft);border-radius:10px;padding:4px 11px;margin-right:6px;margin-bottom:6px;
+}
+.tag.coral{color:var(--coral-deep);background:var(--coral-soft)}
+.tag.butter{color:var(--amber-strong);background:var(--amber-soft)}
+
+/* ---------- 表格（课程参数等） ---------- */
+.table-wrap{overflow-x:auto;margin:18px 0;border:1.5px solid var(--line);border-radius:var(--radius);background:#fff}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:14.5px}
+caption{caption-side:top;text-align:left;padding:12px 16px;font-weight:700;color:var(--ink);background:var(--paper-2);font-size:14px}
+thead th{
+  background:var(--green-deep);color:#fff;font-weight:700;text-align:left;
+  padding:12px 14px;font-size:13.5px;
+}
+tbody td{padding:12px 14px;border-top:1px solid var(--line);color:var(--ink-2);vertical-align:top;word-break:break-word}
+tbody tr:nth-child(even){background:#FBF6EA}
+tbody tr:hover{background:var(--amber-soft)}
+
+/* ---------- FAQ ---------- */
+.faq-item{
+  background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;margin-bottom:16px;
+}
+.faq-item h3{margin:0 0 10px;font-size:17px;font-weight:700;color:var(--ink);display:flex;gap:10px;align-items:baseline}
+.faq-item h3 .q{color:var(--coral);font-family:var(--font-serif);font-weight:900;flex:none}
+.faq-item .answer p{margin:4px 0}
+.faq-item .answer>p:first-child{font-size:15.5px;color:var(--ink)}
+
+/* ---------- 资讯 ---------- */
+.post-card{display:block;background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .2s,box-shadow .2s;color:var(--ink)}
+.post-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft);text-decoration:none}
+.post-card .date{font-size:12.5px;color:var(--ink-2)}
+.post-card h3{margin:8px 0 8px;font-size:18px}
+.post-card p{font-size:14.5px;margin:0}
+.post-card .more{display:inline-flex;align-items:center;gap:4px;margin-top:12px;font-weight:700;color:var(--coral-deep);font-size:14px}
+.post-card .more svg{width:15px;height:15px}
+
+/* ---------- 徽标与说明 ---------- */
+.note{
+  background:var(--amber-soft);border:1.5px dashed var(--amber-strong);
+  border-radius:12px;padding:14px 18px;font-size:13.5px;color:var(--ink-2);margin:16px 0;
+}
+.note b{color:var(--ink)}
+.note.todo{background:var(--mist-soft);border-color:var(--mist)}
+.note.todo b{color:var(--green-deep)}
+.fact-badge{
+  display:inline-block;background:var(--green-soft);color:var(--green-deep);
+  font-size:12px;font-weight:700;border-radius:8px;padding:3px 9px;margin-left:8px;vertical-align:2px;
+}
+
+/* ---------- CTA 与页脚 ---------- */
+.cta-strip{
+  background:var(--green-deep);color:#fff;border-radius:var(--radius-lg);
+  padding:36px 32px;display:flex;flex-wrap:wrap;align-items:center;gap:20px;justify-content:space-between;margin:40px 0 0;
+}
+.cta-strip h2{font-family:var(--font-serif);font-size:22px;font-weight:900;color:#fff}
+.cta-strip p{margin:6px 0 0;color:rgba(255,255,255,.78);font-size:14.5px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 24px;border-radius:var(--radius-btn);
+  font-size:15px;font-weight:700;border:2px solid transparent;cursor:pointer;line-height:1.3;
+  transition:transform .18s ease,background .18s ease,box-shadow .18s ease;
+}
+.btn-primary{background:var(--coral);color:#fff;box-shadow:0 8px 20px rgba(226,96,60,.24)}
+.btn-primary:hover{background:var(--coral-deep);transform:translateY(-2px);text-decoration:none}
+.btn-light{background:#fff;color:var(--coral-deep)}
+.btn-light:hover{background:var(--paper-2);transform:translateY(-2px);text-decoration:none}
+.btn .ic{width:16px;height:16px;transition:transform .18s ease}
+.btn:hover .ic{transform:translateX(3px)}
+
+.site-footer{background:var(--green-deeper);color:rgba(255,255,255,.74);margin-top:70px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding:52px 0 34px}
+.footer-logo{height:42px;width:auto}
+.footer-brand p{font-size:13.8px;margin-top:14px;line-height:1.9;color:rgba(255,255,255,.66)}
+.footer-col h4{color:#fff;font-size:15px;font-weight:700;margin-bottom:14px;font-family:var(--font-serif)}
+.footer-col ul{list-style:none;padding:0}
+.footer-col li{margin-bottom:9px;font-size:14px}
+.footer-col a{color:rgba(255,255,255,.74)}
+.footer-col a:hover{color:var(--amber);text-decoration:none}
+.footer-col .tel{color:var(--amber);font-weight:700;font-variant-numeric:tabular-nums}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.14);padding:20px 0;
+  display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;
+  font-size:12.5px;color:rgba(255,255,255,.5);
+}
+.footer-bottom a{color:rgba(255,255,255,.62)}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:860px){
+  .main-nav{
+    position:fixed;inset:68px 0 auto 0;background:var(--paper);
+    flex-direction:column;align-items:stretch;gap:2px;padding:14px 18px 20px;
+    border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(46,90,73,.1);
+    transform:translateY(-130%);transition:transform .3s ease;display:flex;
+  }
+  .main-nav.open{transform:none}
+  .main-nav a{padding:12px 14px;font-size:16px;border-radius:12px}
+  .main-nav a.active::after{display:none}
+  .main-nav a.active{background:var(--coral-soft)}
+  .nav-toggle{display:block}
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .table-wrap table{min-width:640px}
+}
+@media (max-width:560px){
+  .section{padding:44px 0}
+  .footer-top{grid-template-columns:1fr;gap:26px}
+  .nap-card{padding:22px}
+  .cta-strip{padding:28px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
