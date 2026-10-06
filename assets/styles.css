@@ -338,6 +338,13 @@ tbody tr:hover{background:var(--amber-soft)}
 }
 .footer-bottom a{color:rgba(255,255,255,.62)}
 
+.footer-official{
+  border-top:1px solid rgba(255,255,255,.14);padding:16px 0 0;
+  font-size:13px;line-height:1.7;color:rgba(255,255,255,.62);
+}
+.footer-official strong{color:var(--amber);font-weight:700}
+.footer-official a{color:var(--amber);text-decoration:underline;text-underline-offset:3px}
+
 /* ---------- 响应式 ---------- */
 @media (max-width:980px){
   .hero-art{display:none}
