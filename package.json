@@ -1,0 +1,13 @@
+{
+  "name": "anniekids-chengdu-center",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/static.test.cjs",
+    "test:e2e": "playwright test",
+    "check": "node --check assets/scripts.js && npm test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1"
+  }
+}
